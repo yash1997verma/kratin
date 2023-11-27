@@ -49,10 +49,10 @@ Kratin is a web application that combines **JWT authentication** with the conven
      
 
    - *Landing Page*
-   ![Screenshot 2](./client/public/screenshots/landingPage.jpg)
+   ![Screenshot 2](./client/public/screenshots/landingPage.JPG)
      
     - *Booking Page*
-   ![Screenshot 3](./client/public/screenshots/bookings.jpg)
+   ![Screenshot 3](./client/public/screenshots/bookings.JPG)
 
    
 
