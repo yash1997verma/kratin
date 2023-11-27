@@ -2,6 +2,10 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import toast from "react-hot-toast";
 
+
+const apiUrl = 'https://timeapi.onrender.com';
+// const apiUrl = 'http://localhost:8000';
+
 const token = localStorage.getItem('token');
 export const addBookingAsync = createAsyncThunk(
     'booking/addBookingAsync',
@@ -9,7 +13,7 @@ export const addBookingAsync = createAsyncThunk(
         try{
             
             const res = await axios.post(
-                'http://localhost:8000/booking/addBooking',
+                `${apiUrl}/booking/addBooking`,
                 bookingData,
                 {
                   headers: {
@@ -27,7 +31,7 @@ export const addBookingAsync = createAsyncThunk(
 export const getBookingsAsync = createAsyncThunk(
     'booking/getBookingsAsync',
     async()=>{
-        const res = await axios.get('http://localhost:8000/booking/getbookings',
+        const res = await axios.get(`${apiUrl}/booking/getbookings`,
             {
                 headers: {
                 Authorization: token,

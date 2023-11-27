@@ -9,13 +9,16 @@ export default function Home(){
 
     //validate the token present in local storage
     const token = localStorage.getItem('token')
- 
+    
+    const apiUrl = 'https://timeapi.onrender.com';
+
+    // const apiUrl = 'http://localhost:8000';
 
     //validate token
     useEffect(()=>{
         const checkTokenValidity = async()=>{
             try{
-                const res = await axios.get('http://localhost:8000/user/protected',{
+                const res = await axios.get(`${apiUrl}/user/protected`,{
                     headers:{
                         Authorization: token,
                     }

@@ -4,16 +4,16 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const apiUrl = 'https://habitsaapp.onrender.com';
-// const apiUrl = 'http://localhost:8000'
+const apiUrl = 'https://timeapi.onrender.com';
 
+// const apiUrl = 'http://localhost:8000';
 
 //handle signUp
 export const signUpAsync  = createAsyncThunk(
     'user/signUpAsync',
     async(userData)=>{
         try{
-            const res = await axios.post('http://localhost:8000/user/signUp', userData);
+            const res = await axios.post(`${apiUrl}/user/signUp`, userData);
             return res.data
         }catch(err){
             throw err;
@@ -25,7 +25,7 @@ export const signInAsync = createAsyncThunk(
     'user/signInAsync',
     async(userData)=>{
         try{
-            const res = await axios.post('http://localhost:8000/user/signIn', userData);
+            const res = await axios.post(`${apiUrl}/user/signIn`, userData);
             return res.data;
         }catch(err){
             throw err;
@@ -38,7 +38,7 @@ export const getUserDataAsync = createAsyncThunk(
     async()=>{
         try{
             const token = localStorage.getItem('token');
-            const res = await axios.get('http://localhost:8000/user/getUserData',{
+            const res = await axios.get(`${apiUrl}/user/getUserData`,{
                 headers:{
                     Authorization: token,
                 }
