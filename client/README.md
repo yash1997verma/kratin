@@ -21,7 +21,7 @@ Kratin is a web application that combines **JWT authentication** with the conven
 ## Usage
 
 1. **Installation:**
-   - Clone the repository: `git clone https://github.com/your-username/kratin.git`
+   - Clone the repository: `git clone https://github.com/yash1997verma/kratin.git`
    - Navigate to the project directory: `cd kratin`
    - Install dependencies: `npm install`
 
@@ -30,8 +30,8 @@ Kratin is a web application that combines **JWT authentication** with the conven
    - Create a `.env` file in the root directory with the following:
 
      ```plaintext
-     MONGODB_URI=your_mongodb_connection_url
-     SECRET_KEY=your_secret_key_for_jwt
+     MONGODB_URI=mongodb_connection_url
+     SECRET_KEY=secret
      ```
 
 3. **Run the Application:**
@@ -50,14 +50,8 @@ Kratin is a web application that combines **JWT authentication** with the conven
 
    
 
-## Contributing
 
-If you would like to contribute to Kratin, please open an issue or submit a pull request. Your contributions are welcome!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-**Note:** Replace placeholders like `your-username` and `your_secret_key_for_jwt` with actual values. Provide detailed instructions based on your project structure and technologies used.
+
