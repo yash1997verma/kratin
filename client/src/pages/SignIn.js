@@ -66,7 +66,7 @@ export default function SignIn({ onLogin }){
            
                 <div className=" flex justify-between border-1 border-slate-300 rounded-xl gap-8 md:gap-20  shadow-lg p-6 mt-[-100px] md:w-[900px]">
                   
-                    <img className="h-fit w-[300px] hidden sm:inline my-auto " src="/Illustrations/signIn.png" alt="" />
+                    <img className="h-fit w-[300px] hidden sm:inline my-auto " src="/illustrations/signIn.png" alt="" />
                     <form onSubmit={handleSubmit} className="flex flex-col h-[500px] w-[300px] sm:h-auto sm:w-auto gap-2 text-2xl p-auto md:pr-10">
                         <div className="mx-auto mb-6 ">
                             <p className ="text-xl  font-bold  ">Sign In</p> 
