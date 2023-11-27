@@ -44,7 +44,7 @@ Kratin is a web application that combines **JWT authentication** with the conven
 
    Insert screenshots or images showcasing different sections of your application.
 
-   - ![Screenshot 1](/client/public/screenshots/signIn.jpeg)
+   - ![Screenshot 1](/client/public/screenshots/signIn.jpg)
      *Sign In Page*
 
    - ![Screenshot 2](screenshots/screenshot2.png)
