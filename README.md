@@ -1,3 +1,5 @@
+Live Link: https://kratin-y5ui.onrender.com
+
 # Kratin
 
 Kratin is a web application that combines **JWT authentication** with the convenience of scheduling home appointments for doctors and nurses. The project has the potential for further development, including features like medication reminders. This README provides an overview of the project, its features, and instructions on how to use it.
@@ -42,7 +44,7 @@ Kratin is a web application that combines **JWT authentication** with the conven
 
    Insert screenshots or images showcasing different sections of your application.
 
-   - ![Screenshot 1](/client/public//screenshots/signIn.jpeg)
+   - ![Screenshot 1](/client/public/screenshots/signIn.jpeg)
      *Sign In Page*
 
    - ![Screenshot 2](screenshots/screenshot2.png)
