@@ -62,7 +62,7 @@ export default function SignUp(){
             <div className=" flex  items-center justify-center h-screen w-screen ">
                 <div className=" flex justify-between border-1 border-slate-300 rounded-xl gap-8 md:gap-20  shadow-lg p-6 mt-[-100px] md:w-[900px]">
                   
-                <img className="h-fit w-[300px] hidden sm:inline my-auto " src="/Illustrations/signUp.png" alt=" " />
+                <img className="h-fit w-[300px] hidden sm:inline my-auto " src="/illustrations/signUp.png" alt=" " />
                     <form onSubmit={submitForm} className="flex flex-col h-[500px] w-[300px] sm:h-auto sm:w-auto gap-2 text-2xl p-auto md:pr-10">
                         <div className="mx-auto mb-6 ">
                             <p className="text-xl font-bold  font-mySans  ">Sign Up</p> 
