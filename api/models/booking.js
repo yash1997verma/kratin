@@ -10,6 +10,10 @@ const bookingSchema = new mongoose.Schema({
     date:{
         type: Date,
     },
+    userId: {
+        type: String,
+        required: true,
+    }
 
 });
 

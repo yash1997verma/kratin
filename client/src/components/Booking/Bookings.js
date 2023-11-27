@@ -12,14 +12,17 @@ export default function Bookings(){
     //booking form state
     const [bookingForm, setBookingForm] = useState(false);
     const dispatch = useDispatch();
-    
+
+    //get userdata from store
+    const userData = useSelector(state=>state.user.userData);
+
     useEffect(()=>{
         //get all bookings
         dispatch(getBookingsAsync());
         toast('Booking View', {
             icon: <img className="w-4 h-4" src="/icons/booking.png" alt='N/A' />,
         });
-    },[]);
+    },[userData]);
     const navigate = useNavigate();
     const appView = useSelector(state=>state.user.appView);
     useEffect(()=>{
@@ -33,8 +36,7 @@ export default function Bookings(){
     const handleAddBookingForm =()=>{
         setBookingForm(!bookingForm);
     }
-    //get userdata from store
-    const userData = useSelector(state=>state.user.userData);
+  
     return (
         <> 
             {bookingForm && <BookingForm  setBookingForm={setBookingForm} /> }

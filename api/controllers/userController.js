@@ -54,7 +54,7 @@ const userController = {
         //send a token, since user is valid  
         return res.status(200).json({
             message: "Logged In successfully",
-            userData,
+            userData: user,
             token: "Bearer " + token
         });
     },

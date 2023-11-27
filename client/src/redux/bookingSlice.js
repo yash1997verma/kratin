@@ -34,7 +34,6 @@ export const getBookingsAsync = createAsyncThunk(
                 },
             }
         );
-        // console.log(res.data)
         return res.data.allBookings;
     }
 )

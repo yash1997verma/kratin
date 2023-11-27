@@ -12,7 +12,12 @@ export function Navbar(){
   const changeAppView = (view)=>{
     dispatch(userActions.setAppView(view));
   }
-  
+  //logout user
+  const logOut =()=>{
+    localStorage.removeItem('token');
+    //remove data from store
+    dispatch(userActions.logOut());
+  }
  
   return(
     <>
@@ -54,13 +59,13 @@ export function Navbar(){
        
 
         {/* logout */}
-        {/* <div className="absolute flex flex-col items-center bottom-[100px] cursor-pointer " title="Logout">
+        <div onClick={logOut} className="absolute flex flex-col items-center bottom-[100px] cursor-pointer " title="Logout">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />
           </svg>
           <p className="select-none text-center p-2 text-[10px] font-mySans font-bold">LOGOUT</p>
 
-        </div> */}
+        </div>
       </div>
 
     </>

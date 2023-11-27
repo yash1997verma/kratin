@@ -37,7 +37,6 @@ export const getUserDataAsync = createAsyncThunk(
     'user/getUserDataAsync',
     async()=>{
         try{
-               // console.log('ellajdf')
             const token = localStorage.getItem('token');
             const res = await axios.get('http://localhost:8000/user/getUserData',{
                 headers:{
@@ -52,7 +51,9 @@ export const getUserDataAsync = createAsyncThunk(
 
     }
 
-)
+);
+
+
 
 
 
@@ -75,15 +76,19 @@ const userSlice = createSlice({
         },
         setIsAuthenticated : (state, action)=>{
             state.isAuthenticated = action.payload;
-        }
+        },
+        logOut:(state, action)=> {
+            state.isAuthenticated = false;
+            state.userData= null;
+            state.status = 'idle'
+        },
     },
     extraReducers: (builder)=>{
         builder
         //for signUp 
         .addCase(signUpAsync.fulfilled, (state, action)=>{
             toast.success("User Created");
-            state.status = 'succeeded'
-            
+            // state.status = 'succeeded';
         })
         .addCase(signUpAsync.rejected, (state, action)=>{
             state.status = 'failed';
@@ -97,7 +102,7 @@ const userSlice = createSlice({
             //save token in local storage and state
             localStorage.setItem('token', action.payload.token);
             state.isAuthenticated = true;
-            // state.userData = action.payload.userData;
+            state.userData = action.payload.userData;
         })
         .addCase(signInAsync.rejected, (state, action)=>{
             state.status = 'failed';

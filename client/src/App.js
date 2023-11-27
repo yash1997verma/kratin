@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
+import LandingPage from "./pages/LandingPage";
 import MedReminder from "./components/MedReminder/MedReminder";
 import Bookings from "./components/Booking/Bookings";
 import { useEffect, useState } from "react";
@@ -41,6 +42,10 @@ function App() {
 
 
   const router = createBrowserRouter([
+    {
+      path: '/',
+      element:<LandingPage />
+    },
     {
       path: '/signIn',
       element: <SignIn  />

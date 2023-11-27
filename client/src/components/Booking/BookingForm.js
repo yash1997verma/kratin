@@ -1,17 +1,21 @@
 import { useRef } from "react"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addBookingAsync } from "../../redux/bookingSlice";
-
+import { useEffect } from "react";
 export default function BookingForm({setBookingForm}){
     const dispatch =  useDispatch();
     const typeRef = useRef();
     const dateRef = useRef();
+    //get current user
+    const user = useSelector(state=>state.user.userData);
 
+    
     const handleAdd = (e)=>{
         e.preventDefault();
         const bookingData = {
             type: typeRef.current.value,
             date: dateRef.current.value,
+            userId: user._id
         }
         // console.log(bookingData)
         dispatch(addBookingAsync(bookingData));
